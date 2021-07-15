@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#Home" class="header__logo">Gabriel M.Quattrini</a>
+
+        <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+
+        <nav class="nav" id="nav-menu">
+            <div class="nav__content bd-grid">
+
+                <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+
+                <div class="nav__perfil">
+                    <div class="nav__img">
+                        <img src="assets/img/perfil.png" alt="">
+                    </div>
+
+                    <div>
+                        <a href="#Home" class="nav__name">Gabriel M. Quattrini</a>
+                        <span class="nav__profesion">Web designer</span>
+                    </div>
+                </div>
+
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#Home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#About" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#Skill" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#Proyects" class="nav__link">Proyects</a></li>
+                        <li class="nav__item"><a href="#Contact" class="nav__link">Contact</a></li>
+                        <div class="animation start-home"></div>
+                    </ul>
+                </div>
+
+                <div class="nav__social">
+                    <a href="#" class="nav__social-icon">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                    <a href="#" class="nav__social-icon">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="Home" id="Home">
+        <div class="container">
+            <div class="content">
+                <div class="mydiv animate-bg">
+                    <h1 class="sometxt">Gabriel Matias Quattrini</h1>
+                    <p>Developer Web</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tec" id="Skill">
+        <div class="skill__title">
+            <h2>Skills</h2>
+        </div>
+        <div class="skill">
+            <div class="skill__div">
+                <h3>Front-End</h3>
+                <ul class="ul__skill">
+                    <li><img class="skill__img" src="assets/img/skills/html.svg" alt=""></li>
+                    <li><img class="skill__img" src="assets/img/skills/css.png" alt=""></li>
+                    <li><img class="skill__img" src="assets/img/skills/javascript.png" alt=""></li>
+                    <li><img class="skill__img" src="assets/img/skills/angular.svg" alt=""></li>
+                    <li><img class="skill__img" src="assets/img/skills/react.svg" alt=""></li>
+                </ul>
+            </div>
+            <div class="skill__div">
+                <h3>Back-End</h3>
+                <ul class="ul__skill">
+                    <li><img class="skill__img" src="assets/img/skills/Postgresql.png" alt=""></li>
+                    <li><img class="skill__img" src="assets/img/skills/firebase.png" alt=""></li>
+                    <li><img class="skill__img" src="assets/img/skills/go.png" alt=""></li>
+                    <li><img class="skill__img" src="assets/img/skills/java.png" alt=""></li>
+                    <li><img class="skill__img" src="assets/img/skills/MySQL-logo.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="proy" id="Proyects">
+        <div class="skill__title">
+            <h2>Proyects</h2>
+        </div>
+        <ul>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+            <li>-</li>
+        </ul>
+    </div>
+
+    <footer id="Contact">
+        <div class="skill__title">
+            <h2>Contact</h2>
+        </div>
+        <a href="pdf/test-Currículum.pdf" target="_blank"> descargar cv</a>
+        <h2>redes</h2>
+        <ul>
+            <li>
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </li>
+            <li>
+                <ion-icon name="logo-github"></ion-icon>
+            </li>
+            <li>
+                <ion-icon name="logo-instagram"></ion-icon>
+            </li>
+            <li>
+                <ion-icon name="mail"></ion-icon>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ===== IONICONS ===== -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
