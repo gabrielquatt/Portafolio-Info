@@ -8,7 +8,7 @@
   /*===== Colores =====*/
   --first-color: #03b4ba;
   --dark-color: #deddda3f; /*dejar ee para la opacidad */
-  --dark-color-alt: #71f0ee38;
+  --dark-color-alt: #4dedea3b;
   --white-color: #29272e;
 
   /* === Colors Divs === */
@@ -50,8 +50,8 @@
 body {
   /* background-image: url("../img/fondo.jpg");*/
   background: var(--section-color-b);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -81,6 +81,10 @@ img {
   grid-template-columns: 100%;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+section {
+  margin-bottom: 4%;
 }
 
 /*===== HEADER =====*/
@@ -117,6 +121,56 @@ img {
 
 /*===== NAV =====*/
 @media screen and (max-width: 768px) {
+  /** linea de color para vista movil  */
+
+  ::-webkit-scrollbar {
+    width: 1;
+  }
+
+  #scrollPath {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 10%;
+    background-color: var(--first-color);
+    animation: animate 5s linear infinite;
+  }
+
+  @keyframes animate {
+    0%,
+    100% {
+      filter: hue-rotate(0deg);
+    }
+    50% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  #progressbar:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 10%;
+    filter: blur(10px);
+  }
+  #progressbar:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 10%;
+    filter: blur(10px);
+  }
+
+  /** ================================================================ */
+
+  .skill__title {
+    padding: 14%;
+    padding-bottom: 2%;
+  }
+
   .nav {
     position: fixed;
     top: 0;
@@ -219,11 +273,36 @@ img {
 
 /*===== MEDIA QUERIES =====*/
 @media screen and (min-width: 768px) {
+  .skill__title {
+    padding: 5%;
+    padding-bottom: 2%;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(73, 71, 71, 0);
+    border-radius: 8x;
+    background-color: #27808031;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    background-color: #07414131;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: rgba(0, 0, 0, 0.3) solid 0.5px;
+    box-shadow: inset 0 0 6px rgba(85, 85, 85, 0);
+    background-color: var(--first-color);
+  }
+
   body {
     margin: 0;
   }
+
   .header {
     height: calc(var(--header-height) + 1rem);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
   }
   .header__logo,
   .header__toggle {
@@ -280,7 +359,10 @@ img {
   .nav__link {
     padding: 0.2rem 0.8rem;
   }
+
   .nav__link:hover {
+    transition-delay: 0.1s;
+
     border-bottom: 2px solid var(--first-color);
   }
   .active {
@@ -294,7 +376,7 @@ img {
     margin-right: auto;
   }
   .ul__skill {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -331,23 +413,22 @@ img {
 }
 
 .skill__div {
+  background-color: var(--section-color-b);
   margin: auto;
+  padding-top: 10px;
   margin-bottom: 50px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid var(--first-color);
+  border-left: 1px solid var(--first-color);
 }
 
 .ul__skill {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   border-top: 2px solid var(--first-color);
   margin: 20px;
-}
-
-.skill__title {
-  padding: 80px;
-  padding-bottom: 30px;
 }
 
 .skill__img {
@@ -359,27 +440,23 @@ img {
 /* ----------------------------------------------------------------------------------------------------- */
 .about {
   background-color: var(--section-color-b);
-  height: 100%;
-  width: 100%;
+  height: 100vh;
 }
 
 .tec {
   background-color: var(--section-color-a);
-  height: auto;
-  width: 100%;
+  height: 100%;
 }
 
 .proy {
   background-color: var(--section-color-b);
-  height: 100%;
-  width: 100%;
+  height: 100vh;
 }
 
 footer {
   /* color para dark #161221*/
   background-color: var(--section-color-a);
-  height: 100%;
-  width: 100%;
+  height: 100vh;
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
@@ -411,7 +488,7 @@ footer {
   width: calc(100% + 2px);
   height: calc(100% + 2px);
   z-index: -1;
-  animation: BGgradient 40s ease infinite;
+  animation: BGgradient 30s ease infinite;
 }
 
 @keyframes BGgradient {
@@ -434,7 +511,6 @@ footer {
 
 video {
   position: fixed;
-
   top: 60%;
   left: 50%;
   transform: translateX(-40%) translateY(-40%);

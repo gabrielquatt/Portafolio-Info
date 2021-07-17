@@ -1,5 +1,13 @@
 "use strict";
+let progress = document.getElementById("progressbar");
+let b = document.getElementById("scrollPath");
+let totalHeight = document.body.scrollHeight - window.innerHeight;
+window.onscroll = function () {
+  let progressHeight = (window.pageYOffset / totalHeight) * 100;
+  b.style.height = progressHeight + "%";
+};
 
+// ===================================================================================================
 let theme = document.getElementById("theme").addEventListener("click", () => {
   changeTheme();
 });
@@ -9,9 +17,9 @@ function changeTheme() {
 
   if (type == "light") {
     // colores tema light
-    document.documentElement.style.setProperty("--first-color", "#03ba55");
+    document.documentElement.style.setProperty("--first-color", "#03b4ba");
+    document.documentElement.style.setProperty("--dark-color-alt", "#4dedea3b");
     document.documentElement.style.setProperty("--dark-color", "#deddda3f");
-    document.documentElement.style.setProperty("--dark-color-alt", "#71f0ac38");
     document.documentElement.style.setProperty("--white-color", "#29272e");
 
     /* === Colors Divs === */
@@ -19,7 +27,10 @@ function changeTheme() {
       "--section-color-b",
       "#dedddaea"
     );
-    document.documentElement.style.setProperty("--section-color-a", "#161221");
+    document.documentElement.style.setProperty(
+      "--section-color-a",
+      "#787879ef"
+    );
     document.documentElement.style.setProperty("--mydiv-color", "#00000023");
     document.documentElement.style.setProperty("--nav-color", "#dedddaea");
 
@@ -27,9 +38,12 @@ function changeTheme() {
     setVideo(type);
   } else {
     // colores tema Dark
-    document.documentElement.style.setProperty("--first-color", "#33d17a");
+
+    document.documentElement.style.setProperty("--first-color", "#03b4ba");
+    document.documentElement.style.setProperty("--dark-color-alt", "#35f0ed46");
+    // document.documentElement.style.setProperty("--first-color", "#33d17a");
+    // document.documentElement.style.setProperty("--dark-color-alt", "#26a269");
     document.documentElement.style.setProperty("--dark-color", "#241f31ee");
-    document.documentElement.style.setProperty("--dark-color-alt", "#26a269");
 
     document.documentElement.style.setProperty("--white-color", "#ffffff");
 
