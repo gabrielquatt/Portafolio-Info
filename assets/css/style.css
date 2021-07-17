@@ -43,7 +43,7 @@
   box-sizing: border-box;
   margin: 0%;
   padding: 0%;
-  text-align: center;
+  text-align: left;
   color: var(--white-color);
 }
 
@@ -85,6 +85,10 @@ img {
 
 section {
   margin-bottom: 4%;
+}
+
+h3 {
+  text-align: center;
 }
 
 /*===== HEADER =====*/
@@ -440,7 +444,12 @@ section {
 /* ----------------------------------------------------------------------------------------------------- */
 .about {
   background-color: var(--section-color-b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
+  color: var(--white-color);
+  text-align: left;
 }
 
 .tec {
