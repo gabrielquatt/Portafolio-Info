@@ -6,11 +6,16 @@
   --header-height: 3rem;
 
   /*===== Colores =====*/
-  --first-color: #33d17a;
-  --dark-color: #241f31ee;
-  --dark-color-2: #221b34;
-  --dark-color-alt: #26a269;
-  --white-color: #ffffff;
+  --first-color: #03b4ba;
+  --dark-color: #deddda3f; /*dejar ee para la opacidad */
+  --dark-color-alt: #71f0ee38;
+  --white-color: #29272e;
+
+  /* === Colors Divs === */
+  --nav-color: #dedddaea;
+  --section-color-b: #dedddaef;
+  --section-color-a: #787879ef;
+  --mydiv-color: #00000023;
 
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
@@ -20,6 +25,8 @@
   /*===== z index =====*/
   --z-fixed: 100;
 }
+
+/*  */
 
 @media screen and (min-width: 768px) {
   :root {
@@ -42,7 +49,7 @@
 
 body {
   /* background-image: url("../img/fondo.jpg");*/
-  background: var(--dark-color-2);
+  background: var(--section-color-b);
   width: 100vw;
   height: 100vh;
   margin: var(--header-height) 0 0 0;
@@ -84,7 +91,7 @@ img {
   top: 0;
   left: 0;
   padding: 0 1.5rem;
-  background-color: var(--dark-color);
+  background-color: var(--nav-color);
   z-index: var(--z-fixed);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,7 +121,7 @@ img {
     position: fixed;
     top: 0;
     left: -100%;
-    background-color: var(--dark-color);
+    background-color: var(--nav-color);
     color: var(--white-color);
     width: 100%;
     height: 100vh;
@@ -126,11 +133,11 @@ img {
 }
 
 .nav__content {
-  height: 100%;
+  height: 90%;
   -ms-grid-rows: max-content 1fr max-content;
   grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
   grid-template-rows: max-content 1fr max-content;
-  row-gap: 2rem;
+  row-gap: 0.5rem;
 }
 
 .nav__close {
@@ -138,7 +145,7 @@ img {
   right: 1.5rem;
   font-size: 1.3rem;
   padding: 0.25rem;
-  background-color: var(--dark-color-alt);
+  background-color: var(--section-color-a);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -350,21 +357,27 @@ img {
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
+.about {
+  background-color: var(--section-color-b);
+  height: 100%;
+  width: 100%;
+}
 
 .tec {
-  background-color: #161221;
+  background-color: var(--section-color-a);
   height: auto;
   width: 100%;
 }
 
 .proy {
-  background-color: var(--dark-color-2);
+  background-color: var(--section-color-b);
   height: 100%;
   width: 100%;
 }
 
 footer {
-  background-color: #161221;
+  /* color para dark #161221*/
+  background-color: var(--section-color-a);
   height: 100%;
   width: 100%;
 }
@@ -376,7 +389,7 @@ footer {
 }
 
 .mydiv {
-  background: rgba(0, 0, 0, 0.802);
+  background: var(--mydiv-color);
   padding: 2em;
 }
 
@@ -426,4 +439,9 @@ video {
   left: 50%;
   transform: translateX(-40%) translateY(-40%);
   z-index: -1;
+}
+
+button {
+  background: none;
+  border: none;
 }
