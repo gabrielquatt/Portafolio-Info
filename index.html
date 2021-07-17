@@ -28,17 +28,17 @@
 
                     <div>
                         <a href="#Home" class="nav__name">Gabriel M. Quattrini</a>
-                        <span class="nav__profesion">Web designer</span>
+                        <span class="nav__profesion">Developer Web</span>
                     </div>
                 </div>
 
                 <div class="nav__menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#Home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#About" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#Home" class="nav__link active">Inicio</a></li>
+                        <li class="nav__item"><a href="#About" class="nav__link">Sobre Mi</a></li>
                         <li class="nav__item"><a href="#Skill" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#Proyects" class="nav__link">Proyects</a></li>
-                        <li class="nav__item"><a href="#Contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="#Projects" class="nav__link">Projectos</a></li>
+                        <li class="nav__item"><a href="#Contact" class="nav__link">Contacto</a></li>
                         <div class="animation start-home"></div>
                     </ul>
                 </div>
@@ -56,14 +56,39 @@
     </header>
 
     <section class="Home" id="Home">
+        <video id="video" loop autoplay preload muted>
+            <source src="assets/video/test.mp4" type='video/mp4; codecs=" avc1,mp4a"' />
+            <source src="assets/video/test.webm" type='video/ogg; codecs="theora,vorbis"' />
+            <source src="assets/video/test.ogg" type='video/webm; codecs="vp8,vorbis"' />
+        </video>
         <div class="container">
             <div class="content">
                 <div class="mydiv animate-bg">
                     <h1 class="sometxt">Gabriel Matias Quattrini</h1>
+                    <hr />
                     <p>Developer Web</p>
                 </div>
             </div>
         </div>
+
+    </section>
+    <section class="About" id="About">
+        <div class="skill__title">
+            <h2>Sobre Mi</h2>
+            <hr />
+            <p>
+                Soy Desarrolador Web apasionado del Front End, amante de los diseños simples y modernos. Soy una persona
+                autodidacta, y siempre que puedo intento aprender nuevas tecnologias.
+            </p>
+            <p>
+                Actualmente me encuento en la etapa final de mi Tecnicatura Universitaria en Diseño y Desarrolo de
+                Aplicaciones en la
+                universidad del centro de la provincia de Bs As en Tandil. Estoy buscando formar parte de un proyecto
+                que me permita
+                dejar mi marca en la web y me haga crecer profesionalmente.
+            </p>
+        </div>
+
     </section>
 
     <section class="tec" id="Skill">
@@ -94,9 +119,10 @@
         </div>
     </section>
 
-    <div class="proy" id="Proyects">
+
+    <section class="proy" id="Projects">
         <div class="skill__title">
-            <h2>Proyects</h2>
+            <h2>Projects</h2>
         </div>
         <ul>
             <li>-</li>
@@ -104,7 +130,7 @@
             <li>-</li>
             <li>-</li>
         </ul>
-    </div>
+    </section>
 
     <footer id="Contact">
         <div class="skill__title">
