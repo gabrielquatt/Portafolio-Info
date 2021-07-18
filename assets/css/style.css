@@ -14,7 +14,7 @@
   /* === Colors Divs === */
   --nav-color: #dedddaea;
   --section-color-b: #dedddaef;
-  --section-color-a: #787879ef;
+  --section-color-a: #78787970;
   --mydiv-color: #00000023;
 
   /*===== Fuente y tipografia =====*/
@@ -26,7 +26,7 @@
   --z-fixed: 100;
 }
 
-/*  */
+/* =================== menor a la resolucion 768 tendra este comportamiento ==================================== */
 
 @media screen and (min-width: 768px) {
   :root {
@@ -43,7 +43,6 @@
   box-sizing: border-box;
   margin: 0%;
   padding: 0%;
-  text-align: left;
   color: var(--white-color);
 }
 
@@ -54,8 +53,8 @@ body {
   height: 100%;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
-  font-size: var(--normal-font-size);
   font-weight: 500;
+  text-align: center;
 }
 
 ul {
@@ -84,10 +83,10 @@ img {
 }
 
 section {
-  margin-bottom: 4%;
+  padding-bottom: 5%;
 }
 
-h3 {
+.about > h3 {
   text-align: center;
 }
 
@@ -123,11 +122,30 @@ h3 {
   cursor: pointer;
 }
 
+/** ============================================================================================================ */
+/** ================== menor a la resolucion 768 tendra este comportamiento ==================================== */
+/** ============================================================================================================ */
+
 /*===== NAV =====*/
 @media screen and (max-width: 768px) {
+  /* about  */
+  .about {
+    display: block;
+    margin: 5%;
+  }
+  .about__body {
+    padding: 10% 0%;
+  }
+
+  .about__title {
+    padding: 4%;
+  }
+
+  /* ----- */
+
   /** linea de color para vista movil  */
 
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
     width: 1;
   }
 
@@ -166,7 +184,7 @@ h3 {
     width: 100%;
     height: 10%;
     filter: blur(10px);
-  }
+  } */
 
   /** ================================================================ */
 
@@ -176,7 +194,7 @@ h3 {
   }
 
   .nav {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: -100%;
     background-color: var(--nav-color);
@@ -275,11 +293,31 @@ h3 {
   border-bottom: 2px solid var(--first-color);
 }
 
+/** ============================================================================================================ */
+/** ================== mayor a la resolucion 768 tendra este comportamiento ==================================== */
+/** ============================================================================================================ */
+
 /*===== MEDIA QUERIES =====*/
 @media screen and (min-width: 768px) {
+  /* about  */
+  .about {
+    display: flex;
+    padding-top: 5%;
+  }
+
+  .about__text {
+    width: 60%;
+  }
+  /* ----- */
+
+  .img__page {
+    width: 90%;
+  }
+
   .skill__title {
     padding: 5%;
     padding-bottom: 2%;
+    text-align: left;
   }
 
   ::-webkit-scrollbar-track {
@@ -407,8 +445,13 @@ h3 {
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
+.skill__body {
+  background-color: var(--section-color-b);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.707);
+  margin: 0% 8% 0% 8%;
+}
 
-.skill {
+.skill__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
@@ -417,13 +460,8 @@ h3 {
 }
 
 .skill__div {
-  background-color: var(--section-color-b);
-  margin: auto;
-  padding-top: 10px;
+  margin: 0% 10%;
   margin-bottom: 50px;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid var(--first-color);
-  border-left: 1px solid var(--first-color);
 }
 
 .ul__skill {
@@ -431,8 +469,12 @@ h3 {
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  border-top: 2px solid var(--first-color);
+  /* border-top: 2px solid var(--first-color); */
   margin: 20px;
+}
+
+.skill {
+  padding-top: 5%;
 }
 
 .skill__img {
@@ -442,14 +484,34 @@ h3 {
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
+.about__body {
+  background-image: url("../img/fondo-div-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .about {
-  background-color: var(--section-color-b);
-  display: flex;
+  /* background-color: var(--section-color-a); */
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   color: var(--white-color);
   text-align: left;
+}
+.about > h3 {
+  text-align: center;
+}
+
+.about__text {
+  padding: 4%;
+  margin-left: 5%;
+
+  height: auto;
+  background-color: var(--section-color-b);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.707);
+}
+
+.about__title {
+  margin-bottom: 5%;
 }
 
 .tec {
@@ -462,10 +524,21 @@ h3 {
   height: 100vh;
 }
 
-footer {
+.contact {
   /* color para dark #161221*/
   background-color: var(--section-color-a);
-  height: 100vh;
+  height: 90vh;
+}
+
+footer {
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  background-color: var(--nav-color);
+  border-top: 2px solid var(--first-color);
+}
+footer > p {
+  padding: 15px;
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
@@ -514,7 +587,6 @@ footer {
 
 .animate-bg:after {
   filter: brightness(1.4);
-  filter: drop-shadow(10px 10px 10px rgb(248, 220, 97));
   filter: blur(15px);
 }
 

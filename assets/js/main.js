@@ -1,11 +1,11 @@
 "use strict";
-let progress = document.getElementById("progressbar");
-let b = document.getElementById("scrollPath");
-let totalHeight = document.body.scrollHeight - window.innerHeight;
-window.onscroll = function () {
-  let progressHeight = (window.pageYOffset / totalHeight) * 100;
-  b.style.height = progressHeight + "%";
-};
+// let progress = document.getElementById("progressbar");
+// let b = document.getElementById("scrollPath");
+// let totalHeight = document.body.scrollHeight - window.innerHeight;
+// window.onscroll = function () {
+//   let progressHeight = (window.pageYOffset / totalHeight) * 100;
+//   b.style.height = progressHeight + "%";
+// };
 
 // ===================================================================================================
 let theme = document.getElementById("theme").addEventListener("click", () => {
@@ -29,7 +29,8 @@ function changeTheme() {
     );
     document.documentElement.style.setProperty(
       "--section-color-a",
-      "#787879ef"
+      // "#787879ef"
+      "#78787970"
     );
     document.documentElement.style.setProperty("--mydiv-color", "#00000023");
     document.documentElement.style.setProperty("--nav-color", "#dedddaea");
@@ -48,7 +49,11 @@ function changeTheme() {
     document.documentElement.style.setProperty("--white-color", "#ffffff");
 
     document.documentElement.style.setProperty("--section-color-b", "#221b34");
-    document.documentElement.style.setProperty("--section-color-a", "#161221");
+    document.documentElement.style.setProperty(
+      "--section-color-a",
+      //"#161221"
+      "#78787970"
+    );
 
     document.documentElement.style.setProperty("--mydiv-color", "#070707d9");
     document.documentElement.style.setProperty("--nav-color", "#241f31ee");
